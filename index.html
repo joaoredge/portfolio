@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="./assets/img/favicon.png">
+    <title>Joao Renato - Portfolio</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+
+    <!-- Font Awesome icons -->
+    <script src="https://kit.fontawesome.com/a9cdbedf57.js" crossorigin="anonymous"></script>
+
+    <!-- Styling CSS -->
+
+    <!-- Theme 1 -->
+    <link rel="stylesheet" id="themeStylesheet" href="./assets/css/style.css">
+
+    <!-- Theme 2 -->
+    <!-- <link rel="stylesheet" href="./assets/css/style-two.css"> -->
+
+    <!-- Theme 3 -->
+    <!-- <link rel="stylesheet" href="./assets/css/style-three.css"> -->
+
+<style>
+/* === Horizontal scroll for Skills section === */
+#skills .projects-cards {
+  display: flex;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  gap: 1rem;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+  padding-bottom: 0.5rem;
+}
+
+#skills .projects-card-box {
+  flex: 0 0 160px;
+  scroll-snap-align: start;
+  text-align: center;
+}
+/* Optional: hide scrollbar on WebKit */
+#skills .projects-cards::-webkit-scrollbar {
+  height: 6px;
+}
+#skills .projects-cards::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 3px;
+}
+</style>
+<style>
+#skills .projects-cards {
+  display: flex;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  overflow-y: hidden;
+  gap: 1rem;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+  padding-bottom: 0.5rem;
+}
+#skills .projects-card-box {
+  flex: 0 0 160px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  height: 160px;
+  scroll-snap-align: start;
+  margin: 0;
+}
+</style>
+<style>
+/* --- Horizontal slider for Skills --- */
+#skills .projects-cards{
+  display:flex !important;
+  flex-wrap:nowrap;
+  gap:1rem;
+  overflow-x:auto;
+  overflow-y:hidden;
+  padding-bottom:0.5rem;
+  scroll-snap-type:x mandatory;
+  -webkit-overflow-scrolling:touch;
+}
+#skills .projects-card-box{
+  flex:0 0 160px;
+  height:160px;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+  background:#222831;
+  border-radius:8px;
+  text-align:center;
+  scroll-snap-align:start;
+}
+#skills .projects-card-box i{font-size:2rem;}
+
+/* --- Offset for fixed header when scrolling --- */
+:root{
+  --header-height: 90px; /* adjust if your header is taller/shorter */
+}
+html{
+  scroll-behavior:smooth;
+  scroll-padding-top: var(--header-height);
+}
+section{scroll-margin-top: var(--header-height);}
+</style>
+</head>
+
+<body>
+
+    <header>
+
+        <div>
+            <a href="#home"><span class="logo">Full Stack-DEVELOPER</span></a>
+        </div>
+        <div>
+            <ul><ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#work">Work Experience</a></li>
+                    <li><a href="#education">Education</a></li>
+                    <li><a href="#certificate">Certificate</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul></ul>
+        </div>
+
+    </header>
+
+    <main>
+
+        <section class="hero-section" id="home">
+            <div>
+                <div>
+                    <h4 title="Hello, How are you?">Hi, There!</h4>
+                    <h2 class="hero-section__title">I'm <span>Joao Renato Maximiano Menezes.</span></h2>
+                    <p class="hero-section__desc">I am a Full Stack Engineer<br>
+                        I am looking for a new opportunity.</p>
+                </div>
+
+
+                <div class="hero-buttons">
+                    <button class="btn btn-primary" title="Got a cool project? Let’s work together!">Hire
+                        me</button>
+                </div>
+            </div>
+
+            <div class="hero-img">
+                <img src="assets/img/Joao.jpg" alt="Joao-portfolio" width="350">
+            </div>
+        </section>
+
+        <!-- About Section  -->
+        <section class="about-section" id="about">
+
+            <div class="about-img">
+                <img src="assets/img/2.png" alt="Joanrenato-portfolio">
+            </div>
+
+            <div class="about-content">
+                <h4>About Me</h4>
+                <h2>I'm a <span>senior full-stack developer</span><br></h2> 
+                <p> I have <b>7+ years</b> of experience building 
+                <b>secure</b>, <b>scalable</b> web and mobile platforms across 
+                <b>hospitality</b>, <b>fintech</b>, and <b>SaaS</b>.<br/>
+                </h3>
+				At <b>BetterWorld Technology</b>, I built <b>multi-currency financial systems</b>,
+                <b>user onboarding flows</b>, and <b>real-time dashboards</b> with 
+                <b>automated deployments</b>, <b>observability</b>, and 
+                <b>strict compliance</b>.
+                </p>
+
+                <button class="btn btn-primary">
+                    <a href="https://github.com/danielace1" target="_blank">
+                        Know More <i class="fa-solid fa-arrow-right-to-bracket"></i>
+                    </a>
+                </button>
+            </div>
+
+        </section>
+
+        <!-- Projects Section -->
+        
+<section class="projects-section" id="skills">
+    <h2>My <span>Skills</span></h2>
+    <div class="projects-cards">
+        
+            <div class="projects-card-box">
+                <i class="fab fa-react fa-2x"></i>
+                <p>Next.js</p> 
+            </div>
+            <div class="projects-card-box">
+                <i class="fab fa-node-js fa-2x"></i>
+                <p>Node.js</p>
+            </div>
+            <div class="projects-card-box">
+                <i class="fa-solid fa-database fa-2x"></i>
+                <p>MongoDB</p> 
+            </div>
+            <div class="projects-card-box">
+                <i class="fa-solid fa-database fa-2x"></i>
+                <p>MySQL</p>
+            </div>
+            <div class="projects-card-box">
+                <i class="fab fa-js fa-2x"></i>
+                <p>JavaScript</p>
+            </div>
+            <div class="projects-card-box">
+                <i class="fab fa-react fa-2x"></i>
+                <p>React JS</p>
+            </div>
+            <div class="projects-card-box">
+                <i class="fab fa-js fa-2x"></i> 
+                <p>jQuery</p>
+            </div>
+            <div class="projects-card-box">
+                <i class="fa-solid fa-leaf fa-2x"></i> 
+                <p>Django</p>
+            </div>
+            <div class="projects-card-box">
+                <i class="fab fa-vuejs fa-2x"></i>
+                <p>Vue.js</p>
+            </div>
+            <div class="projects-card-box">
+                <i class="fab fa-angular fa-2x"></i>
+                <p>Angular</p>
+            </div>
+            <div class="projects-card-box">
+                <i class="fa-solid fa-database fa-2x"></i>
+                <p>PostgreSQL</p> 
+            </div>
+            <div class="projects-card-box">
+                <i class="fa-solid fa-code-branch fa-2x"></i> 
+                <p>GraphQL</p>
+            </div>
+            <div class="projects-card-box">
+                <i class="fab fa-microsoft fa-2x"></i> 
+                <p>C#</p>
+            </div>
+            <div class="projects-card-box">
+                <i class="fa-solid fa-gem fa-2x"></i>
+                <p>Ruby</p>
+            
+    </div>
+</section>
+<section class="projects-section" id="work">
+            <h2>My <span>Project</span></h2>
+            <div class="projects-cards">
+                <div class="projects-card-box">
+                    <div style="height: 280px;">
+                        <h4>Oponita</h4>
+                        <img src="assets/img/work/opontia.png" alt="" style="height: 100%; width: 100%"/>
+                    </div>
+                    <div class="projects-card-box__desc" style = "padding-top: 30px;">
+                        <p>A digital service that acquires and scales successful online brands across emerging markets by optimizing operations, marketing, and supply chain infrastructure.</p>
+                    </div>
+                    <div class="projects-card-box__buttons">
+                        <button class="btn btn-dark-outlined">
+                            <a href="https://opontia.com"
+                                target="_blank">View <i class="fa-solid fa-external-link"></i></a>
+                        </button>
+                    </div>
+                </div>
+                <div class="projects-card-box">
+                    <div style="height: 280px;">
+                        <h4>Homeaglow</h4>
+                        <img src="assets/img/work/factwise.png" alt="" style="height: 100%; width: 100%"/>
+                    </div>
+                    <div class="projects-card-box__desc" style = "padding-top: 30px;">
+                        <p>A digital service that acquires and scales successful online brands across emerging markets by optimizing operations, marketing, and supply chain infrastructure.</p>
+                    </div>
+                    <div class="projects-card-box__buttons">
+                        <button class="btn btn-dark-outlined">
+                            <a href="https://www.homeaglow.com/"
+                                target="_blank">View <i class="fa-solid fa-external-link"></i></a>
+                        </button>
+                    </div>
+                </div>
+                <div class="projects-card-box">
+                    <div style="height: 280px;">
+                        <h4>Revinate</h4>
+                        <img src="assets/img/work/revinate.png" alt="" style="height: 100%; width: 100%"/>
+                    </div>
+                    <div class="projects-card-box__desc" style = "padding-top: 30px;">
+                        <p>An online platform that connects homeowners with professional house cleaners</p>
+                    </div>
+                    <div class="projects-card-box__buttons">
+                        <button class="btn btn-dark-outlined">
+                            <a href="https://revinate.com"
+                                target="_blank">View <i class="fa-solid fa-external-link"></i></a>
+                        </button>
+                    </div>
+                </div>
+            </div>
+</section>
+
+        <!-- Contact Section -->
+<section class="projects-section">
+    <h2>My <span>Work Experience</span></h2>
+    <div class="projects-cards">
+        <div class="projects-card-box">
+            <div class="projects-card-box__desc">
+                <h4>Senior Full Stack Engineer</h4>
+                <p>BetterWorld Technology | Managed IT & Cybersecurity</p> 
+                <p> [Mar 2022 - Present]</p>
+                <ul>
+                    <li>Led the development of core web and mobile interfaces for a fintech platform focuse on secure digital transactions and user onboarding
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="projects-card-box">
+            <div class="projects-card-box__desc">
+                <h4>Senior Full Stack Developer</h4>
+                <p>BetterWorld Technology | Managed IT & Cybersecurity</p> 
+                <p> [Aug 2019- Feb 2022]</p>
+                <ul>
+                    <li>
+                        Developed a secure healthcare platform to manage patient records, appointment scheduling, and real-time medical updates.
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="projects-card-box">
+            <div class="projects-card-box__desc">
+                <h4>Full Stack Developer</h4>
+                <p>Upwork</p> 
+                <p> [Aug 2017- Jun 2019]</p>
+                <ul>
+                    <li>
+                        Worked as a Full Stack Developer on Upwork, delivering high-quality web applications by leveraging both front-end and back-end technologies to meet client requirements efficiently.
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>        
+<section class="projects-section" id="education">
+    <h2>My <span>Education</span></h2>
+    <div class="projects-cards">
+        <div class="projects-card-box">
+            <div class="projects-card-box__desc">
+                <h4>Bachelor’s Degree / Computer Software Engineering</h4>
+                <p>University of Adelide</p>
+                <p>[Feb 2017 – Jun 2019]</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="projects-section" id="certificate">
+    <h2>My <span>Certificate</span></h2>
+    <div class="projects-cards">
+        <div class="projects-card-box">
+            <div class="project wow fadeInUp" style="height: 320px;">
+                <img src="assets/img/certificate/1.png" alt="" style="height: 100%; width: 100%;"/>
+            </div>
+            <div class="title" style="padding: 15px 0!important;">AWS</div>
+        </div>
+        <div class="projects-card-box">
+            <div class="project wow fadeInUp" data-wow-delay="0.1s"  style="height: 320px;">
+                <img src="assets/img/certificate/2.png" alt=""  style="height: 100%;width: 100%;"/>
+            </div>
+            <div class="title" style="padding: 15px 0!important;">PHP</div>
+        </div>
+        <div class="projects-card-box">
+            <div class="project wow fadeInUp" data-wow-delay="0.2s" style="height: 320px;">
+                <img src="assets/img/certificate/3.png" alt=""  style="height: 100%; width: 100%;"/>
+            </div>
+            <div class="title" style="padding: 15px 0!important;">Responsive Web Design</div>
+        </div>
+    </div>
+</section>
+<section class="contact-section" id="contact">
+            <h2>Contact <span>ME!</span></h2>
+            <form id="contact">
+                <div>
+                    <input type="text" name="name" id="name" placeholder="FullName" required>
+                </div>
+                <div>
+                    <input type="email" name="email" placeholder="Email" required>
+                </div>
+                <div>
+                    <textarea name="message"id="message" placeholder="Type Message" rows="5"></textarea>
+                </div>
+                <div>
+                    <button class="btn btn-primary">SEND MESSAGE</button>
+                </div>
+            </form>
+            <div class="contact__github">
+                <button class="btn">
+                    <a href="https://github.com/joaoredge" target="_blank">
+                        <i class="fa-brands fa-github"></i> Github
+                    </a>
+                </button>
+                <button class="btn">
+                    <a href="https://www.linkedin.com/in/joao-renato-1314b0360/" target="_blank">
+                        <i class="fa-brands fa-linkedin"></i> LinkedIn
+                    </a>
+                </button>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>Copyright &copy; Joao Renato Maximiano Merezes - <a href="https://github.com/joaoredge" target="_blank">Joao Renato</a> - All Rights
+            Reserved.</p>
+        <div class="footer-buttons">
+            <button data-theme="./assets/css/style.css" class="footer__theme1 active-theme">Theme 1</button>
+            <button data-theme="./assets/css/style-two.css" class="footer__theme2">Theme 2</button>
+            <button data-theme="./assets/css/style-three.css" class="footer__theme3">Theme 3</button>
+        </div>
+
+    </footer>
+
+    <!-- JS -->
+    <script src="./assets/js/script.js"></script>
+    <script src="./assetsjs/wow.min.js"></script>
+	<script src="./assetsjs/siema.min.js"></script>
+    <script src="./assetsjs/typed.min.js"></script>
+    <script src="./assetsjs/codersrank-activity.min.js"></script>
+
+<script>
+/* === Center section on nav click === */
+document.querySelectorAll('nav a[href^="#"]').forEach(function(link) {
+  link.addEventListener('click', function (e) {
+    const targetId = this.getAttribute('href');
+    if (targetId.length > 1) {
+      const section = document.querySelector(targetId);
+      if (section) {
+        e.preventDefault();
+        section.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      }
+    }
+  });
+});
+</script>
+
+<script>
+(function(){
+  const headerH = document.querySelector('header')?.offsetHeight || 0;
+  document.querySelectorAll('nav a[href^="#"]').forEach(link=>{
+    link.addEventListener('click',e=>{
+      const id = link.getAttribute('href');
+      if(id.length>1){
+        const section = document.querySelector(id);
+        if(section){
+          e.preventDefault();
+          const topPos = section.getBoundingClientRect().top + window.pageYOffset - headerH;
+          window.scrollTo({top: topPos, behavior:'smooth'});
+        }
+      }
+    });
+  });
+})();
+</script>
+
+</body>
+
+</html>
